@@ -23,11 +23,13 @@ const SpasswordRoute = require("./Routes/superpassword");
 const EmailRoute = require("./Routes/email");
 const VisitorRoute = require("./Routes/visitor");
 const ForgotPassRoute = require("./Routes/forgotpassword");
+const UploadRoute = require("./Routes/upload");
 
 // Middle wares ----------------------------------------------------------
 dotenv.config();
 app.use(express.json());
 app.use(cors());
+app.use("/uploads", express.static(__dirname + "/uploads"));
 
 // Setting Up apis
 app.use("/api/auth", AuthRoute);
@@ -48,6 +50,7 @@ app.use("/api/spassword", SpasswordRoute);
 app.use("/api/email", EmailRoute);
 app.use("/api/visitor", VisitorRoute);
 app.use("/api/forgot/password", ForgotPassRoute);
+app.use("/api/upload", UploadRoute);
 
 // Connecting to MongoDB --------------------------------------------------------
 

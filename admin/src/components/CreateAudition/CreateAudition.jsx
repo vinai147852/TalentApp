@@ -124,7 +124,11 @@ export default function CreateAudition({
   const HandleCreate = async () => {
     if (Validation()) {
       setLoading(true);
-      UploadImage({ Image, OnSuccess, GetProgress });
+      if (Image) {
+        UploadImage({ Image, OnSuccess, GetProgress });
+      } else {
+        CreateTemplate();
+      }
     }
   };
 
@@ -150,10 +154,7 @@ export default function CreateAudition({
   }, [formvalues?.startdate, enddate_ref]);
 
   const Validation = () => {
-    if (!Image) {
-      toast.error('Please Upload Audition Image');
-      return false;
-    } else if (!formvalues.type) {
+    if (!formvalues.type) {
       toast.error('Please Select Audition Type');
       return false;
     } else if (!formvalues.title) {
