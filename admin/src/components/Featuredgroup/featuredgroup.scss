@@ -1,0 +1,40 @@
+.audition_group_heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  h2 {
+    margin: 0px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  p {
+    color: gray;
+    text-decoration: underline;
+  }
+}
+
+.audition_group_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  place-items: flex-start center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .audition_group_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .audition_group_grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

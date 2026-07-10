@@ -1,0 +1,183 @@
+.main_login_admin_form {
+  width: 100%;
+  min-height: 100vh;
+  background: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner_admin_login_box {
+    width: 60%;
+    height: 85vh;
+    max-height: 550px;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 20%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .left_admin_main_form {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .form_logo_admin_login {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+
+        img {
+          width: 200px;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      .main_admin_form_feilds {
+        width: 80%;
+
+        h2 {
+          font-size: 1rem;
+          color: rgb(104, 104, 104);
+          font-weight: 500;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+
+        .login_toggle_btns {
+          width: 100%;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 4px;
+          overflow: hidden;
+
+          label {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(240, 240, 240);
+            margin: 0px;
+            cursor: pointer;
+            transition: 0.2s linear;
+
+            &.active {
+              background: rgb(0, 0, 0, 1);
+              color: #fff;
+              transition: 0.2s linear;
+            }
+          }
+        }
+
+        .input_bx {
+          width: 100%;
+          position: relative;
+          margin: 20px 0px;
+
+          i {
+            font-size: 1rem;
+            color: gray;
+            position: absolute;
+            right: 10px;
+            bottom: 15px;
+            cursor: pointer;
+          }
+
+          input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgba(220, 220, 220);
+            outline: none;
+            font-size: 1rem;
+            padding: 12px;
+            border: 1px solid #ececec;
+            background: #fafafa;
+
+            &::placeholder {
+              font-size: 1rem;
+              color: gray;
+            }
+          }
+        }
+
+        label {
+          color: black;
+          font-size: 0.9rem;
+          margin-bottom: 5px;
+        }
+
+        button {
+          font-size: 1rem;
+          color: #000;
+          width: 100%;
+          background: #000;
+          border-radius: 4px;
+          padding: 12px 10px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          color: #fff;
+          margin-top: 15px;
+
+          i {
+            font-size: 1.2rem;
+          }
+
+          &:disabled {
+            opacity: 0.6;
+          }
+
+          &:hover {
+            background: rgb(29, 29, 29);
+          }
+        }
+      }
+    }
+
+    .right_admin_main_form {
+      width: 50%;
+      height: 100%;
+
+      .image_right_form {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .inner_admin_login_box {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .inner_admin_login_box {
+    width: 90% !important;
+
+    .left_admin_main_form {
+      width: 100% !important;
+    }
+
+    .right_admin_main_form {
+      display: none !important;
+    }
+  }
+}

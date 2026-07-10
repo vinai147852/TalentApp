@@ -1,0 +1,212 @@
+.main_user_table_container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+
+  .header_user_table_container {
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+
+    .search_box_tabel_container {
+      width: 40%;
+      height: 46px;
+      border-radius: 6px;
+      border: 1px solid rgba(210, 210, 210);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px;
+
+      input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0px 20px;
+        font-size: 1rem;
+        color: gray;
+      }
+
+      button {
+        width: 20%;
+        height: 100%;
+        background: rgba(235, 235, 235);
+        color: #000000;
+        border-radius: 0px;
+        border: none;
+        outline: none;
+        font-size: 1.4rem;
+      }
+    }
+
+    .header_adnew_btn {
+      button {
+        padding: 12px 30px;
+        background: #000000;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 6px;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .user_table_head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 25% 25% 15% 15% 12%;
+    padding: 20px 20px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    background: #eeeeee;
+
+    h2 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 0px;
+      color: rgb(58, 58, 58);
+      text-transform: uppercase;
+    }
+
+    &.admin {
+      display: grid;
+      grid-template-columns: 8% 25% 25% 21% 21%;
+    }
+  }
+
+  .user_tabel_body_container {
+    width: 100%;
+
+    .user_table {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 8% 25% 25% 15% 15% 12%;
+      padding: 10px 20px;
+      background: #fff;
+      place-items: center flex-start;
+      cursor: pointer;
+      transition: 0.2s linear;
+      margin: 5px 0px;
+
+      h2 {
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      &.terminated {
+        background: #be3333;
+
+        &:hover {
+          background: #000 !important;
+        }
+
+        h2 {
+          color: #fff;
+        }
+        button {
+          color: #fff;
+        }
+      }
+
+      &.admin {
+        display: grid;
+        grid-template-columns: 8% 25% 25% 21% 21%;
+      }
+
+      .dropdown-menu {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+        border: none;
+        max-width: 150px;
+
+        label {
+          width: 100%;
+          font-size: 1rem;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: 0.2s linear;
+
+          i {
+            font-size: 1rem;
+            margin-right: 10px;
+          }
+
+          &:hover {
+            background: #dddddd;
+            transition: 0.2s linear;
+          }
+        }
+      }
+
+      &:hover {
+        background: #eeeeee;
+        transition: 0.2s linear;
+        border-radius: 0px;
+      }
+
+      &:last-child:hover {
+        background: #eeeeee;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0px;
+        color: #000;
+
+        &.username {
+          img {
+            margin-right: 10px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      button {
+        text-align: center;
+        padding: 0px 10px;
+        outline: none;
+        border: none;
+        font-size: 1.4rem;
+        color: gray;
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .inner_container {
+    overflow-x: auto !important;
+  }
+
+  .main_user_table_container {
+    min-width: 900px !important;
+  }
+}

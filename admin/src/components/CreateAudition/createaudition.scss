@@ -1,0 +1,302 @@
+.popup_container_auditions {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  padding: 30px 0px;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999999999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+
+  .inner_popup_audition {
+    width: 80%;
+    height: auto;
+    max-width: 1100px;
+    padding: 50px 30px 20px 30px;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-start;
+
+    .fa-circle-xmark {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .inner_popup_container_auditions {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 90%;
+      width: 100%;
+
+      .left_popup_audition_container {
+        width: 50%;
+        height: 100%;
+
+        .popup_audition_upload_image {
+          width: 100%;
+          height: 250px;
+          border: 1px solid rgba(220, 220, 220);
+          border-radius: 5px;
+          position: relative;
+          overflow: hidden;
+
+          input {
+            width: 0%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          label {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: rgb(180, 180, 180);
+            cursor: pointer;
+            transition: 0.2s linear;
+
+            &.active {
+              z-index: 9;
+              position: relative;
+              color: #fff;
+              opacity: 0;
+              transition: 0.2s linear;
+              background: rgba(0, 0, 0, 0.3);
+
+              &:hover {
+                transition: 0.2s linear;
+                opacity: 1;
+              }
+            }
+
+            i {
+              font-size: 4rem;
+              margin-bottom: 10px;
+            }
+          }
+
+          .popup_audition_uploaded_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
+          }
+
+          .popup_audition_loader {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(220, 220, 220, 0.5);
+            z-index: 99;
+
+            .inner_popup_loader {
+              width: 100px;
+              height: 100px;
+
+              .CircularProgressbar {
+                .CircularProgressbar-path {
+                  stroke: #000;
+                }
+                stroke: #000;
+              }
+            }
+          }
+        }
+
+        .popup_audition_inputs_grid {
+          width: 100%;
+
+          .popup_audition_inputs {
+            width: 100%;
+            height: 50px;
+            margin: 15px 0px;
+
+            input {
+              width: 100%;
+              height: 100%;
+              border: 1px solid rgba(220, 220, 220);
+              outline: none;
+              border-radius: 4px;
+              padding: 0px 15px;
+              font-size: 1rem;
+              color: gray;
+            }
+          }
+
+          .popup_audtions_inputs_time_grid {
+            width: 100%;
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0px 20px;
+
+            .time_inputs_grid {
+              width: 100%;
+              height: 100%;
+
+              .e-input-group.e-control-wrapper {
+                width: 100% !important;
+                height: 100% !important;
+                border: 1px solid rgba(220, 220, 220) !important;
+                border-radius: 4px !important;
+                padding: 0px 10px !important;
+
+                &::before {
+                  display: none;
+                }
+
+                &::after {
+                  display: none;
+                }
+
+                input {
+                  font-size: 0.9rem;
+
+                  &::placeholder {
+                    font-size: 0.9rem;
+                    color: gray;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right_popup_audition_container {
+        width: 48%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        justify-content: center;
+
+        .right_popup_audition_description_editor {
+          width: 100%;
+          height: 450px;
+
+          .ql-toolbar {
+            border: 1px solid rgba(220, 220, 220);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+
+          .ql-container {
+            height: 85%;
+            border: 1px solid rgba(220, 220, 220);
+            border-top: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .ql-editor.ql-blank::before {
+              font-size: 1rem;
+              font-style: normal;
+              font-family: 'Playfair Display';
+            }
+
+            p {
+              color: gray;
+              font-size: 1rem;
+              font-family: 'montserrat';
+
+              img {
+                height: 200px;
+                margin: 0px auto;
+              }
+            }
+
+            li {
+              color: gray;
+              font-size: 1rem;
+              font-family: 'montserrat';
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: gray;
+              font-family: 'montserrat';
+            }
+          }
+        }
+      }
+    }
+
+    .popup_audition_cta_btns {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      button {
+        padding: 10px 30px;
+        border: 1px solid rgba(220, 220, 220);
+        outline: none;
+        border-radius: 4px;
+        background: transparent;
+        font-size: 1rem;
+        margin-left: 15px;
+
+        &.upload {
+          background: #000;
+          border: 1px solid rgba(0, 0, 0, 1);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .inner_popup_container_auditions {
+    display: block !important;
+
+    .left_popup_audition_container,
+    .right_popup_audition_container {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .inner_popup_audition {
+    width: 95% !important;
+  }
+
+  .popup_audition_cta_btns {
+    margin-top: 40px !important;
+  }
+}

@@ -1,0 +1,646 @@
+.main_account_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .left_sidebar {
+    width: 25%;
+
+    .sidebar_container {
+      width: 100%;
+      border: 1px solid rgb(236, 236, 236);
+      background: rgb(255, 255, 255);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      .sidebar_links {
+        width: 100%;
+        padding: 14px 20px;
+        font-weight: 500;
+        color: gray;
+        cursor: pointer;
+        transition: 0.3s linear;
+        border-bottom: 1px solid #f1f1f1;
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+        }
+
+        &.active {
+          background: #e6e6e6;
+          color: #000;
+          border-left: 4px solid rgb(112, 112, 112);
+          transition: 0.2s linear;
+        }
+
+        &.logout {
+          margin-top: 0px;
+          background: #ff1717;
+          color: #fff;
+          transition: 0.2s linear;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .right_setting_box {
+    width: 75%;
+    .main_box_container_account {
+      width: 90%;
+      margin: 0px auto;
+      background: #fff;
+      box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      padding: 40px;
+
+      .display_super_password {
+        width: 100%;
+
+        .input_bx {
+          width: 100%;
+          height: 50px;
+          border: 1px solid rgba(220, 220, 220);
+          border-radius: 4px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          input {
+            width: 92%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 0px 15px;
+            font-size: 1rem;
+          }
+
+          i {
+            width: 8%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            background: rgba(235, 235, 235);
+            cursor: pointer;
+
+            &.disabled {
+              opacity: 0.7;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+
+      .heading_box_container {
+        width: 100%;
+        padding-bottom: 10px;
+
+        h2 {
+          margin: 0px;
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #000000;
+
+          span {
+            padding: 10px 45px;
+            border-radius: 6px;
+            color: rgb(0, 0, 0);
+            margin-left: 10px;
+            font-size: 1.2rem;
+            background: #ffe2e2;
+            border: 1.5px dotted #5e5e5e;
+          }
+        }
+
+        p {
+          color: gray;
+          padding-top: 10px;
+        }
+      }
+
+      .avatar_heading {
+        font-size: 1.2rem;
+        color: gray;
+        margin-top: 20px;
+      }
+
+      .avatar_account_box {
+        width: 100%;
+        padding: 10px 0px 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(230, 230, 230);
+
+        .main_account_pImg {
+          width: 80px;
+          height: 80px;
+          border-radius: 100%;
+          margin-right: 25px;
+          border: 1px solid #f3f3f3;
+          background: #e6e6e6;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        .profile_account_img_cta {
+          max-width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          label {
+            padding: 12px 30px;
+            border: 1px solid rgba(220, 220, 220);
+            background: transparent;
+            color: gray;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            border-radius: 4px;
+            margin-right: 15px;
+            cursor: pointer;
+
+            &.active {
+              color: #0a6cff;
+            }
+          }
+        }
+      }
+
+      .progress_line_bx {
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .progress {
+          background: #000;
+          height: 100%;
+        }
+      }
+
+      .account_box_data_settings {
+        width: 100%;
+        padding: 30px 0px;
+        border-bottom: 1px solid rgba(230, 230, 230);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: flex-start;
+        grid-gap: 30px 50px;
+
+        .input_bx {
+          width: 100%;
+
+          .label_inputs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            label {
+              font-size: 0.9rem;
+              color: #000;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 0.7rem;
+              color: gray;
+              margin: 0px;
+            }
+          }
+
+          input {
+            width: 100%;
+            border: 1px solid rgba(220, 220, 220);
+            border-radius: 6px;
+            outline: none;
+            padding: 0px 15px;
+            font-size: 0.9rem;
+            color: gray;
+            height: 45px;
+            box-shadow: none;
+            position: relative;
+          }
+
+          input[type='tel'] {
+            padding: 0px 15px 0px 50px;
+          }
+
+          .inputs_pass_container_box {
+            position: relative;
+
+            i {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 15px;
+              font-size: 1rem;
+              color: gray;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .account_box_delete {
+        width: 100%;
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(230, 230, 230);
+
+        .delete_account_details {
+          max-width: 70%;
+
+          h2 {
+            font-size: 1.2rem;
+            color: #000;
+            font-weight: 700;
+            margin: 5px 0px;
+          }
+
+          p {
+            font-size: 0.9rem;
+            color: gray;
+            font-weight: 500;
+            margin: 0px;
+          }
+        }
+
+        button {
+          padding: 10px 25px;
+          border: 1px solid rgba(220, 220, 220);
+          color: #be3333;
+          border-radius: 6px;
+          outline: none;
+          font-size: 1rem;
+          font-weight: 500;
+          background: transparent;
+          transition: 0.2s linear;
+
+          &:hover {
+            transition: 0.2s linear;
+            background: #be3333;
+            color: #fff;
+            border: 1px solid #be3333;
+          }
+        }
+      }
+
+      .save_changes_box_container {
+        margin-top: 25px;
+        width: 100%;
+        text-align: end;
+
+        button {
+          padding: 10px 25px;
+          border: none;
+          color: #fff;
+          border-radius: 6px;
+          outline: none;
+          font-size: 1rem;
+          font-weight: 500;
+          background: #000000;
+
+          &:disabled {
+            opacity: 0.7;
+          }
+
+          &.back_btn {
+            background: transparent;
+            color: #000;
+            margin-right: 20px;
+            outline: 1px solid #000;
+          }
+        }
+      }
+    }
+
+    .inner_visitors_tabs {
+      width: 100%;
+      margin-top: 30px;
+
+      .visitors_tab_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+          width: 48.5%;
+          padding: 15px 30px;
+          background: rgba(235, 235, 235);
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: 0.2s linear;
+
+          span {
+            padding: 6px 15px;
+            border-radius: 50px;
+            color: #fff;
+            background: #818181;
+            margin-left: 10px;
+            font-size: 0.9rem;
+          }
+
+          &.active {
+            transition: 0.2s linear;
+            background: #000000;
+            color: #fff;
+
+            span {
+              background: #fff;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+      .visitor_table {
+        width: 100%;
+        margin-top: 20px;
+
+        .visitor_table_header {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 10% 25% 20% 25% 20%;
+          background: rgb(255, 255, 255);
+          border-bottom: 2px dotted #afafaf;
+
+          h2 {
+            font-size: 1rem;
+            padding: 20px 20px;
+            margin: 0px;
+            font-weight: 600;
+          }
+        }
+
+        .vistors_main_body_table {
+          width: 100%;
+          height: 100%;
+          max-height: 550px;
+          overflow: auto;
+          margin-top: 5px;
+          border: 10 px solid #000000;
+
+          &::-webkit-scrollbar {
+            width: 8px !important;
+            background: #f1f1f1;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            width: 8px;
+            background: rgb(187, 187, 187);
+          }
+
+          .visitor_details {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 10% 25% 20% 25% 20%;
+            background: transparent;
+            margin: 0px 0px;
+            padding: 10px 0px;
+            border-bottom: 1px solid #eeeeee;
+
+            &:hover {
+              background: #ececec;
+              transition: 0.2s linear;
+            }
+
+            h2 {
+              font-size: 1rem;
+              padding: 10px 20px;
+              margin: 0px;
+
+              span {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+                color: #fff;
+                background: #be3333;
+                border-radius: 4px;
+
+                &.active {
+                  background: #198754;
+                }
+              }
+
+              &:last-child {
+                text-align: center;
+                color: #424242;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main_artists_tab {
+      width: 90%;
+      margin: 0px auto;
+
+      .artists_tab_heading {
+        width: 100%;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .heading_inner_artists_tab {
+          width: 80%;
+
+          h2 {
+            font-size: 2.2rem;
+            color: #000;
+            font-weight: 600;
+            margin: 10px 0px;
+          }
+
+          p {
+            color: gray;
+          }
+        }
+
+        .artists_heading_number {
+          padding: 10px 40px;
+          background: #eee;
+          border-radius: 4px;
+          color: #000;
+          font-weight: 600;
+          font-size: 1.2rem;
+          border: 1px dashed gray;
+        }
+      }
+
+      .main_artists_tab_display {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+
+        .filter_artists_export {
+          width: 100%;
+          padding-bottom: 30px;
+
+          h2 {
+            font-size: 1.6rem;
+            color: #000;
+            font-weight: 600;
+            margin: 10px 0px;
+          }
+
+          .main_filter {
+            width: 100%;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0px 20px;
+
+            button {
+              background: #000;
+              color: #fff;
+              border-radius: 4px;
+            }
+          }
+        }
+
+        .all_artists_table {
+          width: 100%;
+          padding: 20px 0px 0px 0px;
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+          .artists_table_heading {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 30% 25% 25%;
+
+            h2 {
+              font-size: 1.1rem;
+              color: #000;
+              margin: 0px;
+            }
+          }
+
+          .artists_table_body {
+            margin-top: 10px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 30% 25% 25%;
+
+            h2 {
+              font-size: 1rem;
+              color: gray;
+              margin: 0px;
+              padding: 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main_account_container {
+    display: block;
+
+    .left_sidebar {
+      width: 100%;
+      margin-bottom: 40px;
+      .sidebar_container {
+        width: 100%;
+      }
+    }
+
+    .right_setting_box {
+      width: 100%;
+      .main_box_container_account,
+      .main_artists_tab {
+        width: 100%;
+      }
+    }
+  }
+
+  .main_filter {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 10px !important;
+  }
+
+  .all_artists_table {
+    overflow-x: auto !important;
+  }
+
+  .artists_table_heading,
+  .artists_table_body {
+    min-width: 640px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .visitor_table {
+    min-width: 640px !important;
+  }
+
+  .inner_visitors_tabs {
+    overflow-x: auto !important;
+  }
+
+  .heading_box_container h2 span {
+    padding: 5px 15px !important;
+  }
+
+  .visitors_tab_header {
+    flex-direction: column !important;
+
+    label {
+      width: 100% !important;
+      margin: 5px !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main_filter {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .main_box_container_account {
+    padding: 25px !important;
+  }
+
+  .account_box_data_settings {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .display_super_password {
+    .input_bx {
+      input {
+        width: 80% !important;
+      }
+
+      i {
+        width: 20% !important;
+      }
+    }
+  }
+}

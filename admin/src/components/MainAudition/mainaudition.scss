@@ -1,0 +1,63 @@
+.main_audition_heading {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(230, 230, 230);
+
+  h2 {
+    margin: 0px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Merriweather';
+  }
+
+  h2 span {
+    color: rgb(138, 138, 138);
+  }
+
+  button {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    background: #000;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  button i {
+    padding-right: 15px;
+  }
+}
+
+.main_auditions_grid {
+  width: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  place-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .main_auditions_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .main_auditions_grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .main_audition_heading {
+    display: block !important;
+
+    h2 {
+      margin-bottom: 15px !important;
+    }
+  }
+}

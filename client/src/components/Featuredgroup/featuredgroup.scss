@@ -1,0 +1,46 @@
+.audition_group_heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  h2 {
+    margin: 0px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Playfair Display';
+    font-style: italic;
+  }
+
+  p {
+    color: gray;
+    text-decoration: underline;
+  }
+}
+
+.audition_group_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px 20px;
+  place-items: flex-start;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+  .audition_group_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .audition_group_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+}

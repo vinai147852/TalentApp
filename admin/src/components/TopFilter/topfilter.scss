@@ -1,0 +1,121 @@
+.main_postfilter {
+  width: 100%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  background: #fff;
+
+  .inner_filter {
+    max-width: 1150px;
+    width: 95%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Left_filter_post {
+      .project_filteration {
+        width: 200px;
+      }
+    }
+
+    .Right_filter_post {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .toggle_filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 10px;
+
+        p {
+          font-size: 1rem;
+          font-weight: 600;
+          margin: 0px 0px;
+        }
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 30px;
+          margin-right: 10px;
+
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked + .Slider {
+              background: #fcb702;
+            }
+
+            &:checked + .Slider::before {
+              transform: translateX(28px);
+            }
+          }
+
+          .Slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            background: #ccc;
+            border-radius: 30px;
+            transition: 0.4s linear;
+
+            &::before {
+              position: absolute;
+              content: '';
+              left: 5px;
+              top: 4px;
+              height: 22px;
+              width: 22px;
+              border-radius: 50%;
+              background-color: white;
+              transition: 0.4s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .main_postfilter {
+    .inner_filter {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .Left_filter_post {
+        margin-bottom: 20px;
+      }
+
+      .Right_filter_post {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center flex-start;
+        grid-gap: 10px;
+
+        .toggle_filters {
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .main_postfilter {
+    .Right_filter_post {
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-gap: 15px !important;
+    }
+  }
+}

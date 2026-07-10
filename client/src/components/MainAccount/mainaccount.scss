@@ -1,0 +1,617 @@
+.main_account_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .left_sidebar {
+    width: 25%;
+
+    .sidebar_container {
+      width: 100%;
+      border: 1px solid rgb(236, 236, 236);
+      background: rgb(255, 255, 255);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      .sidebar_links {
+        width: 100%;
+        padding: 14px 20px;
+        font-weight: 500;
+        color: gray;
+        cursor: pointer;
+        transition: 0.3s linear;
+        border-bottom: 1px solid #f1f1f1;
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+        }
+
+        &.active {
+          background: #e6e6e6;
+          color: #000;
+          border-left: 4px solid rgb(112, 112, 112);
+          transition: 0.2s linear;
+        }
+
+        &.logout {
+          margin-top: 0px;
+          background: #ff1717;
+          color: #fff;
+          transition: 0.2s linear;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .right_setting_box {
+    width: 75%;
+    .main_box_container_account {
+      width: 90%;
+      margin: 0px auto;
+      background: #fff;
+      box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      padding: 40px;
+
+      .heading_box_container {
+        width: 100%;
+
+        h2 {
+          margin: 0px;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+      }
+
+      .add_portfolio_container {
+        width: 100%;
+        margin-top: 30px;
+
+        &.social {
+          padding: 20px 0px;
+          border-bottom: 2px dotted rgba(220, 220, 220);
+          margin: 0px;
+
+          .add_portfolio_input {
+            margin: 20px 0px;
+
+            a {
+              i {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+
+        .add_portfolio_input {
+          width: 100%;
+          height: 58px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid rgba(220, 220, 220);
+          border-radius: 4px;
+          overflow: hidden;
+
+          input {
+            width: 80%;
+            height: 100%;
+            padding: 0px 15px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: gray;
+          }
+
+          button {
+            width: 20%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background: #000;
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+
+        .added_portfolios_body {
+          width: 100%;
+          margin-top: 10px;
+
+          .portfolio_box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border: 1px dotted rgb(80, 80, 80);
+            background: rgb(247, 247, 247);
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 15px 0px;
+
+            h2 {
+              margin: 0px;
+              font-size: 1rem;
+              color: #be3333;
+            }
+
+            i {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+
+      .account_images_grid {
+        margin-top: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        .image_account_div {
+          width: 100%;
+          position: relative;
+          height: 250px;
+          border: 1px solid rgba(220, 220, 220);
+          border-radius: 10px;
+          overflow: hidden;
+
+          .account_image_uploaders {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.2s linear;
+            background: rgba(0, 0, 0, 0.4);
+
+            input {
+              width: 0px;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+
+            label {
+              font-size: 3rem;
+              color: #fff;
+              cursor: pointer;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+
+            &:hover {
+              opacity: 1;
+              transition: 0.2s linear;
+            }
+
+            h4 {
+              display: none;
+            }
+
+            &.show {
+              opacity: 1;
+              transition: 0.2s linear;
+              background: transparent;
+
+              label {
+                color: #000;
+              }
+
+              h4 {
+                font-size: 1rem;
+                margin: 10px 0px;
+                display: block;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+
+          .image_uploader {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .CircularProgressbar {
+              width: 35%;
+
+              .CircularProgressbar-path {
+                stroke: #000;
+              }
+
+              .CircularProgressbar-text {
+                stroke: #000;
+                fill: #000;
+              }
+            }
+          }
+        }
+      }
+
+      .avatar_heading {
+        font-size: 1.2rem;
+        color: gray;
+        margin-top: 20px;
+      }
+
+      .avatar_account_box {
+        width: 100%;
+        padding: 10px 0px 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(230, 230, 230);
+
+        .main_account_pImg {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin-right: 25px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        .profile_account_img_cta {
+          max-width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          position: relative;
+
+          label {
+            padding: 12px 35px;
+            border: 1px solid rgba(220, 220, 220);
+            background: transparent;
+            color: gray;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            border-radius: 4px;
+            margin-right: 15px;
+            cursor: pointer;
+
+            &.active {
+              color: #0a6cff;
+            }
+          }
+
+          input {
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+            left: 0px;
+            top: 0px;
+          }
+        }
+      }
+
+      .account_box_data_settings {
+        width: 100%;
+        padding: 30px 0px;
+        border-bottom: 1px dotted rgb(128, 128, 128);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: flex-start;
+        grid-gap: 30px 50px;
+        margin-bottom: 50px;
+
+        .input_bx {
+          width: 100%;
+
+          .label_inputs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            label {
+              font-size: 0.9rem;
+              color: #000;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 0.7rem;
+              color: gray;
+              margin: 0px;
+            }
+          }
+
+          .select_bx {
+            height: 48px;
+            width: 100%;
+
+            &.ismulti {
+              width: 100%;
+              min-height: 45px;
+              height: auto;
+            }
+          }
+
+          input {
+            width: 100%;
+            border: 1px solid rgba(220, 220, 220);
+            border-radius: 6px;
+            outline: none;
+            padding: 0px 15px;
+            font-size: 0.9rem;
+            color: gray;
+            height: 45px;
+            box-shadow: none;
+            position: relative;
+          }
+
+          input[type="tel"] {
+            padding: 0px 15px 0px 50px;
+          }
+
+          .inputs_pass_container_box {
+            position: relative;
+
+            i {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 15px;
+              font-size: 1rem;
+              color: gray;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .account_box_delete {
+        width: 100%;
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(230, 230, 230);
+
+        .delete_account_details {
+          max-width: 70%;
+
+          h2 {
+            font-size: 1.2rem;
+            color: #000;
+            font-weight: 700;
+            margin: 5px 0px;
+          }
+
+          p {
+            font-size: 0.9rem;
+            color: gray;
+            font-weight: 500;
+            margin: 0px;
+          }
+        }
+
+        button {
+          padding: 10px 25px;
+          border: 1px solid rgba(220, 220, 220);
+          color: #be3333;
+          border-radius: 6px;
+          outline: none;
+          font-size: 1rem;
+          font-weight: 500;
+          background: transparent;
+          transition: 0.2s linear;
+
+          &:hover {
+            transition: 0.2s linear;
+            background: #be3333;
+            color: #fff;
+            border: 1px solid #be3333;
+          }
+        }
+      }
+
+      .save_changes_box_container {
+        margin-top: 25px;
+        width: 100%;
+        text-align: end;
+
+        button {
+          padding: 10px 25px;
+          border: none;
+          color: #fff;
+          border-radius: 6px;
+          outline: none;
+          font-size: 1rem;
+          font-weight: 500;
+          background: #000000;
+
+          &:disabled {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .otp_container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999999;
+
+      .inner_otp_container {
+        max-width: 600px;
+        width: 100%;
+        background: #fff;
+        padding: 50px 0px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        position: relative;
+
+        .fa-circle-xmark {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 1.8rem;
+          cursor: pointer;
+        }
+
+        .otp_heading {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+
+          h2 {
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: 600;
+            margin: 0px;
+          }
+
+          p {
+            font-size: 1.1rem;
+            color: gray;
+            margin: 15px 0px;
+          }
+        }
+
+        .otp_inputs_container {
+          margin: 40px auto;
+          width: 80%;
+          border: 1px solid rgba(200, 200, 200);
+          height: 58px;
+          border-radius: 4px;
+
+          .opt_default_container {
+            width: 100%;
+            height: 100%;
+            display: grid !important;
+            grid-template-columns: repeat(6, 1fr);
+
+            input {
+              width: 100% !important;
+              height: 100% !important;
+              outline: none;
+              border: none;
+              border-right: 1px solid rgba(200, 200, 200);
+              background: transparent;
+              font-size: 1.2rem;
+
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+        }
+
+        .otp_form_btns {
+          width: 80%;
+          margin: 0px auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            position: absolute;
+          }
+
+          button {
+            padding: 10px 30px;
+            background: #000;
+            color: #fff;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+
+            &:nth-child(1) {
+              background: gray;
+            }
+
+            &:disabled {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.isdelete_container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+
+  .inner_isdelete {
+    width: 50%;
+    padding: 30px 40px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .btns_isdelete {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 10px 30px;
+      border-radius: 4px;
+      margin: 0px 10px;
+      border: none;
+      outline: none;
+      background: gray;
+      color: #fff;
+
+      &:nth-child(2) {
+        background: #000;
+      }
+    }
+  }
+}
