@@ -12,7 +12,7 @@ import axios from 'axios';
 const UPLOAD_URL =
   process.env.NODE_ENV === 'production'
     ? 'https://tjcfdbv2-5005.inc1.devtunnels.ms/api/upload'
-    : 'http://localhost:5005/api/upload';
+    : `http://${window.location.hostname}:5005/api/upload`;
 
 export const UploadImage = async ({ Image, OnSuccess, GetProgress }) => {
   try {
