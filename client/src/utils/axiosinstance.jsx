@@ -3,7 +3,7 @@ import axios from "axios";
 const BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://tjcfdbv2-5005.inc1.devtunnels.ms/api/"
-    : "http://localhost:5005/api/";
+    : `http://${window.location.hostname}:5005/api/`;
     
 const AuthRequest = () => {
   const Token = JSON.parse(
